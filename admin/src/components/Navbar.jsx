@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({setToken}) => {
   return (
-    <div>
+    <div className='navbar'>
         <h1>Admin Panel</h1>
-        <button>Sign Out</button>
+        <button onClick={()=>setToken("")} className='nav-btn'>Log Out</button>
     </div>
   )
 }

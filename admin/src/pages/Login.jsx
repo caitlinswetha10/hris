@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // For navigation
+import { backendUrl } from '../App';
+import axios from "axios"
 
-const Login = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
+const Login = ({setToken}) => {
+  const [email , setEmail] = useState("");
+  const [password , setPassword] = useState("")
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+
+  const handleSubmit =async (e) => {
+    try {
+      e.preventDefault();
+      const response = await axios.post(backendUrl + "/api/user/admin",  {email , password})
+      if(response.data.success){
+        setToken(response.data.token)
+      }else{
+        console.log(response.data.message)
+      }
+    } catch (error) {
+      
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form Data Submitted:', formData);
-  };
+  useEffect(()=>{
+    console.log(email , password)
+  } , [email , password])
 
   return (
     <div className="login-container">
@@ -32,8 +38,8 @@ const Login = () => {
             id="email"
             name="email"
             placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
             required
           />
         </div>
@@ -44,8 +50,8 @@ const Login = () => {
             id="password"
             name="password"
             placeholder="Enter your password"
-            value={formData.password}
-            onChange={handleChange}
+            value={password}
+            onChange={(e)=>setPassword(e.target.value)}
             required
           />
         </div>
