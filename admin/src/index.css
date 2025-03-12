@@ -294,3 +294,16 @@ body {
 .link:hover {
   text-decoration: underline;
 }
+
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+  align-items: center;
+}
+
+.navbar .nav-btn{
+  width: 100px;
+}
