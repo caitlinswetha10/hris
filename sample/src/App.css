@@ -195,3 +195,40 @@ body {
     display: none;
   }
 }
+
+
+.record-container{
+  margin: 100px auto;
+}
+
+.record-title{
+  display: grid;
+  grid-template-columns: repeat(5, 150px); /* 5 equal columns */
+  gap: 200px;
+  background-color: rgb(0, 110, 255);
+  align-items: center;
+  color: white;
+  padding-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  padding-right: 10px;
+  
+}
+
+.record-data{
+  display: grid;
+  grid-template-columns: repeat(5, 150px); /* 5 equal columns */
+  gap: 200px;
+  align-items: center;
+  background-color: #cccccc4f;
+  color: black;
+  padding-left: 10px;
+  padding: 10px;
+  padding-right: 10px;
+
+}
+
+.record-data:hover{
+  background-color: #9e9ea441;
+  transition: all;
+}
