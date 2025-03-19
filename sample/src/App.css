@@ -195,3 +195,86 @@ body {
     display: none;
   }
 }
+
+
+.record-container{
+  margin: 100px auto;
+}
+
+.record-filter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 50px;
+}
+.record-filter input{
+  flex: 1;
+  padding: 15px; 
+  border-radius: 20px;
+  border: 0;
+  outline:0;
+  border: blue solid 1px;
+}
+
+.record-filter select{
+  padding: 10px;
+}
+
+.record-title{
+  display: grid;
+  grid-template-columns: repeat(5, 150px); /* 5 equal columns */
+  gap: 200px;
+  background-color: rgb(0, 110, 255);
+  align-items: center;
+  color: white;
+  padding-left: 10px;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px ;
+  padding-right: 10px;
+  
+}
+
+.record-data{
+  display: grid;
+  grid-template-columns: repeat(5, 150px); /* 5 equal columns */
+  gap: 200px;
+  align-items: center;
+  background-color: #cccccc4f;
+  color: black;
+  padding-left: 10px;
+  padding: 10px;
+  padding-right: 10px;
+
+}
+
+.record-data:hover{
+  background-color: #9e9ea441;
+  transition: all;
+}
+
+.pagination{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pagination button {
+  background-color: blue;
+  border: 0;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+
+}
+
+.pagination button.active{
+  background-color: green;
+}
+
+.pagination button:disabled{
+  background-color: gray;
+}

@@ -17,7 +17,7 @@ function App() {
 
   return (
      <div className='grid-container'>
-      <Header OpenSidebar = {OpenSidebar}/>
+      {/* <Header OpenSidebar = {OpenSidebar}/> */}
       <Sidebar openSidebarToggle = {openSidebarToggle} OpenSidebar = {OpenSidebar}/>
       <Routes>
       <Route path="/dashboard" element = {<Dashboard/>}/>

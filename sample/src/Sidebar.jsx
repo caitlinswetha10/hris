@@ -22,20 +22,11 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                     </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href=''>
-                        <BsPersonCircle className='icon'/>LOGIN
+                    <a href='http://localhost:5174/' target='_blank_'>
+                        <BsPersonCircle className='icon'/>ADMIN LOGIN
                     </a>
                 </li>
-                <li className='sidebar-list-item'>
-                    <a href=''>
-                        <BsGearFill className='icon'/>SETTINGS
-                    </a>
-                </li>
-                <li className='sidebar-list-item'>
-                    <a href=''>
-                        <BsPersonCheckFill className='icon'/>HELP
-                    </a>
-                </li>
+
             </ul>
         </aside>
     )
