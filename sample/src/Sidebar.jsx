@@ -22,7 +22,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                     </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href='http://localhost:5173/' target='_blank_'>
+                    <a href='http://localhost:5174/' target='_blank_'>
                         <BsPersonCircle className='icon'/>ADMIN LOGIN
                     </a>
                 </li>
